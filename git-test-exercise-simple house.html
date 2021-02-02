@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+   <head>
+     <title>git-test-exersize</title>
+<script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+   </head>
+
+   <body>
+
+  <canvas id="myCanvas" width="750" height="500">
+         Canvas not supported
+      </canvas>
+
+       
+<script type="text/javascript">
+	$(document).ready(function() {
+	
+	var canvas = document.getElementById("myCanvas");
+	var ctx = canvas.getContext("2d");
+	
+               
+        ctx.fillStyle = 'brown';
+        ctx.fillRect(500, 300, 20, 80);
+        
+        ctx.fillStyle = 'green';
+        ctx.beginPath();
+        ctx.ellipse(510, 250, 70, 40, Math.PI / 2, 2, 4 * Math.PI*2);
+        ctx.closePath();
+        ctx.fill();
+        
+        
+        //add your work here 
+        
+        
+        
+
+    });
+       
+       </script>
+       
+   </body>
+</html>
