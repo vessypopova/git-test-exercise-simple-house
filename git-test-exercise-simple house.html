@@ -18,7 +18,20 @@
 	var canvas = document.getElementById("myCanvas");
 	var ctx = canvas.getContext("2d");
 	
-               
+        
+		//sky
+		ctx.beginPath();
+		ctx.fillStyle = "#43c2e6"
+		ctx.fillRect(0, 0, 900, 330);
+		ctx.closePath();
+		
+		//ground
+		ctx.beginPath();
+		ctx.rect(0, 330, 900, 200);
+		ctx.fillStyle = "#36c23b";
+		ctx.fill();
+		ctx.closePath();
+		
         ctx.fillStyle = 'brown';
         ctx.fillRect(500, 300, 20, 80);
         
@@ -51,6 +64,28 @@
 		ctx.fill();
 		//ROOF END
         
+		//tree trunk
+		ctx.beginPath();
+		ctx.fillStyle = 'brown';
+        ctx.fillRect(88, 300, 20, 80);
+		ctx.closePath();
+		
+		//tree green part
+		ctx.beginPath();
+		ctx.moveTo(100,200);
+		ctx.lineTo(150,310);
+		ctx.lineTo(45,310);
+		ctx.lineTo(100,200);
+		ctx.fillStyle="green";
+		ctx.fill();
+		ctx.closePath();
+		
+		//door knob
+		ctx.beginPath();
+		ctx.arc(363, 355, 3, 0, 2 * Math.PI);
+		ctx.fillStyle ="gold";
+		ctx.fill();
+		ctx.closePath();
         
         
 
