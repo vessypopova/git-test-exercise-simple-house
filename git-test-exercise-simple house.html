@@ -158,6 +158,17 @@
 		
 		//END MARIAS CODE
 
+	            // Function to draw a cloud at the specified coordinates BY GABRIEL
+            function drawCloud(context, x, y) {
+                context.beginPath();
+                context.arc(x, y, 90, 0, 2 * Math.PI); // Inner circle
+                context.arc(x + 50, y - 20, 70, 0, 2 * Math.PI); // Top circle
+                context.arc(x + 120, y, 90, 0, 2 * Math.PI); // Right circle
+                context.fillStyle = "lightblue"; // Changed cloud color to lightblue
+                context.fill();
+            }
+      //End GABRIEL CODE
+
     });
        
        </script>
