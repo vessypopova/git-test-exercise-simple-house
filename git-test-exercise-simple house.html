@@ -18,12 +18,22 @@
 	var canvas = document.getElementById("myCanvas");
 	var ctx = canvas.getContext("2d");
 	
-        
-		//sky
-		ctx.beginPath();
-		ctx.fillStyle = "#43c2e6"
-		ctx.fillRect(0, 0, 900, 330);
-		ctx.closePath();
+     // Function to draw a cloud at the specified coordinates BY GABRIEL
+            function drawCloud(context, x, y) {
+                context.beginPath();
+                context.arc(x, y, 90, 0, 2 * Math.PI); // Inner circle
+                context.arc(x + 50, y - 20, 70, 0, 2 * Math.PI); // Top circle
+                context.arc(x + 120, y, 90, 0, 2 * Math.PI); // Right circle
+                context.fillStyle = "#87CEEB"; // Sky color
+                context.fill();
+            }
+
+            // Draw sky cloud
+            drawCloud(ctx, 250, 80);
+               drawCloud(ctx, 350, 80);
+               drawCloud(ctx, 400, 80);
+		          drawCloud(ctx, 450, 80);
+                //END GABRIEL CODE
 		
 		//ground
 		ctx.beginPath();
@@ -158,16 +168,7 @@
 		
 		//END MARIAS CODE
 
-	            // Function to draw a cloud at the specified coordinates BY GABRIEL
-            function drawCloud(context, x, y) {
-                context.beginPath();
-                context.arc(x, y, 90, 0, 2 * Math.PI); // Inner circle
-                context.arc(x + 50, y - 20, 70, 0, 2 * Math.PI); // Top circle
-                context.arc(x + 120, y, 90, 0, 2 * Math.PI); // Right circle
-                context.fillStyle = "lightblue"; // Changed cloud color to lightblue
-                context.fill();
-            }
-      //End GABRIEL CODE
+	           
 
     });
        
