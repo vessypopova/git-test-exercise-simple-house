@@ -7,7 +7,7 @@
 
    <body>
 
-  <canvas id="myCanvas" width="750" height="500">
+  <canvas id="myCanvas" width="750" height="800">
          Canvas not supported
       </canvas>
 
@@ -86,41 +86,44 @@
 		ctx.fillStyle ="gold";
 		ctx.fill();
 		ctx.closePath();
+		
+		//END PAVLOS CODE
+		
+		//START LOIZOS CODE
+		
+		//Bird
+		
+      ctx.strokeStyle = "#000000";
+      ctx.lineWidth = 3;
+
+      ctx.beginPath();
+      ctx.moveTo(450, 100);
+
+      // First curved line
+      ctx.quadraticCurveTo(500, 65, 550, 100);
+
+      // Second curved line
+      ctx.quadraticCurveTo(580, 65, 650, 100);
+
+      ctx.stroke();
+		
+		
+		// Road
+      ctx.fillStyle = '#808080';
+      ctx.fillRect(0, 430, canvas.width, 100);
+
+      // Lines in the middle of the road
+      ctx.fillStyle = 'white';
+      var lineHeight = 15; // Adjust the height of the lines
+      var gap = 20; // Adjust the gap between lines
+
+      for (var x = 0; x < canvas.width; x += lineHeight + gap) {
+        ctx.fillRect(x, 475, lineHeight, 10);
+      }
+		
+        //END LOIZOS CODE
         
-        //START MARIA'S CODE
 
-		//radial gradient for circle on sun
-		var gradient = ctx.createRadialGradient(200, 100, 50, 200, 100, 150);
-        gradient.addColorStop(0, 'yellow');
-        gradient.addColorStop(0.5, '#43c2e6');
-
-		//adding the color of the gradient on the circle
-        ctx.beginPath();
-        ctx.fillStyle = gradient;
-        ctx.arc(200, 100, 150, 0, 2 * Math.PI);
-        ctx.fill();
-        ctx.closePath();
-
-        //circle shape of sun
-		ctx.beginPath();
-        ctx.fillStyle = 'yellow';
-        ctx.arc(200, 100, 50, 0, 2*Math.PI);
-        ctx.fill();
-        ctx.closePath();
-		
-		//Bush
-		//circle of bush
-		ctx.fillStyle = 'green';
-        ctx.beginPath();
-        ctx.ellipse(227, 320, 50, 50, Math.PI / 2, 2, 4 * Math.PI*2);
-        ctx.closePath();
-        ctx.fill();
-		
-		//rectangle of bush
-		ctx.fillStyle = 'green';
-		ctx.fillRect (180, 330, 95, 50);
-
-		//END MARIA'S CODE
     });
        
        </script>
